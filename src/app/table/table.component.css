@@ -1,0 +1,20 @@
+.main-window {
+    margin: 2em;
+    background-color: coral;
+    border-radius: 1em;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    width: 18em;
+    height: 12em;
+}
+
+.deal-button {
+    margin: 1em;
+}
+
+.playing-card {
+    width: 2em;
+    height: 3em;
+    background-color: green;
+    box-shadow: 4px 4px 1px 1px rgba(0, 0, 255, .2);
+    margin: 3em;
+}
