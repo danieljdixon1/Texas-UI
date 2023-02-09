@@ -1,8 +1,11 @@
 .daniel-panel{
-    margin: 2em;
-    padding: 1em;
+    margin: 3em;
+    padding: 3em;
     background-color: coral;
     border-radius: 1em;
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .5);
-    width: 36em;
+}
+
+.main-pane-orientation{
+    display: flex;
 }
