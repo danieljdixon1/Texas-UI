@@ -1,0 +1,6 @@
+
+<div class="stack-container">
+    <div class="stack" *ngFor="let _ of [].constructor(size); let i = index">
+        <img class="chip" [ngStyle]="getStyleObject(i)" src={{path}}>
+    </div>
+</div>

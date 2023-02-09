@@ -1,0 +1,15 @@
+<div class="pile-container">
+    <h3 class="dollar-display">
+        ${{dollars}}
+    </h3>
+    <div class="pile-center">
+        <app-stack *ngFor="let _ of [].constructor(StackBigFills); let i = index" [color]=2 [size]=5></app-stack>
+        <app-stack [color]=2 [size]=StackBig></app-stack>
+
+        <app-stack *ngFor="let _ of [].constructor(StackMediumFills); let i = index" [color]=1 [size]=5></app-stack>
+        <app-stack [color]=1 [size]=StackMedium></app-stack>
+
+        <app-stack *ngFor="let _ of [].constructor(StackSmallFills); let i = index" [color]=0 [size]=5></app-stack>
+        <app-stack [color]=0 [size]=StackSmall></app-stack>
+    </div>
+</div>

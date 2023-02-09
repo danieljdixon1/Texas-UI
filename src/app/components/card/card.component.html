@@ -1,0 +1,18 @@
+<div *ngIf="position==0">
+    <div *ngIf="!card?.faceUp" class="playing-card card-big"></div>
+    <div *ngIf="card?.faceUp" class="playing-card-face card-big">
+        <img *ngIf="card?.faceUp" class="large-Image" src={{path}}>
+    </div>
+</div>
+<div *ngIf="position==1">
+    <div *ngIf="!card?.faceUp" class="playing-card card-mid"></div>
+    <div *ngIf="card?.faceUp" class="playing-card-face card-mid">
+        <img *ngIf="card?.faceUp" class="medium-Image" src={{path}}>
+    </div>
+</div>
+<!-- <div *ngIf="position==2">
+    <div *ngIf="!card?.faceUp" class="playing-card card-small"></div>
+    <div *ngIf="card?.faceUp" class="playing-card-face card-small">
+        <img *ngIf="card?.faceUp" class="small-Image" src={{path}}>
+    </div>
+</div> -->

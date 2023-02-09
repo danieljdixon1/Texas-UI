@@ -1,0 +1,44 @@
+.playing-card {
+    flex: 1;
+    background-color: palevioletred;
+    margin: 0.5em;
+}
+.playing-card-face {
+    flex: 1;
+    margin: 0.5em;
+}
+
+.card-big {
+    box-shadow: 6px 6px 1.5px 1.5px rgba(0, 0, 255, .4);
+    width: 4em;
+    height: 6em;
+    border-radius: 0.6em;
+}
+.card-mid {
+    box-shadow: 3px 3px 0.75px 0.75px rgba(0, 0, 255, .4);
+    width: 2em;
+    height: 3em;
+    border-radius: 0.3em;
+}
+.card-small {
+    box-shadow: 1.5px 1.5px 0.275px 0.275px rgba(0, 0, 255, .4);
+    width: 1em;
+    height: 1.5em;
+    border-radius: 0.15em;
+}
+
+.large-Image {
+    width: 50em;
+    height: 50em;
+    margin-left: -7.35em;
+}
+.medium-Image {
+    width: 25em;
+    height: 25em;
+    margin-left: -3.68em;
+}
+.small-Image {
+    width: 25em;
+    height: 25em;
+    margin-left: -3.68em;
+}

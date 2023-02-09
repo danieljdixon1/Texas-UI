@@ -1,0 +1,19 @@
+
+.dollar-display{
+    color: white;
+    margin: 1em;
+}
+
+.pile-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* width: 6em;
+    height: 6em; */
+}
+
+.pile-center{
+    display: flex;
+    flex-direction: row;
+}

@@ -1,0 +1,141 @@
+.daniel-panel{
+    margin: 1em;
+    padding: 1em;
+    background-color: rgb(0, 39, 0);
+    color: white;
+    border-radius: 1em;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    width: 36em;
+
+    border-style: solid;
+    border-color: green;
+    border-width: 0.333em;
+}
+
+.turn-chip-container{
+    width: 0.01em;
+    height: 0.01em;
+}
+.turn-chip{
+    position: relative;
+    width: 5em;
+    height: 5em;
+}
+
+.main-window {
+    margin: 2em;
+    background-color: green;
+    border-radius: 1em;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    width: 36em;
+    height: 24em;
+
+    border-style: solid;
+    border-color: coral;
+    border-width: 0.333em;
+}
+.table-card-display{
+    width: 10em;
+}
+
+.oppoents-card-display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36em;
+}
+
+.money-to-the-right{
+    display: flex;
+    align-items: flex-end;
+    width: 12em;
+}
+.money-pot-to-the-right{
+    display: flex;
+    align-items: flex-end;
+    width: 18em;
+}
+
+.money-display{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.opponents-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+}
+.table-space {
+    display: flex;
+    align-items: center;
+    height:9em;
+}
+.players-side {
+    height: 12em;
+
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+}
+.card-side {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.player-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8em;
+}
+.player-input-container {
+    display: flex;
+    align-items: flex-end;
+}
+
+.uniform-input-container{
+    width: 6em;
+    height: 4em;
+}
+
+.deal-button {
+    margin: 1em;
+}
+.fold-button {
+    margin: 1em;
+}
+.call-button {
+    margin: 1em;
+}
+
+.bet-border{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16em;
+    height: 6em;
+    
+    border-style: solid;
+    border-width: 0.5em;
+    border-color: coral;
+    border-radius: 2em;
+}
+.bet-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bet-button {
+    margin: 1em;
+}
+
+.bet-amount-input-container {
+    margin-top: 1em;
+    width: 5em;
+}

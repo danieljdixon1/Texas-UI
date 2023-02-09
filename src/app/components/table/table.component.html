@@ -1,0 +1,74 @@
+
+<div class="daniel-panel">
+    <h1>
+        {{opponentsAction}}
+    </h1>
+</div>
+<div class="main-window">
+    <div class="opponents-side">
+        <div class="turn-chip-container" style="top: 1em;">
+            <img *ngIf="yourTurnFirst==false" class="turn-chip" src="assets/Chips/TurnChip.svg">
+        </div>
+        <div class="oppoents-card-display">
+            <app-card-list [cards]=oppoent_cards [position]=1></app-card-list>
+        </div>
+        <div class="money-display">
+            <div class="money-to-the-right">
+                <app-pile [dollars]=oppoent_dollars></app-pile>
+            </div>
+        </div>
+    </div>
+    <div class="table-space">
+        <div class="table-card-display">
+            <app-card-list [cards]=table_cards [position]=1></app-card-list>
+        </div>
+        <div class="money-display">
+            <div class="money-pot-to-the-right">
+                <app-pile [dollars]=pot_dollars></app-pile>
+            </div>
+        </div>
+    </div>
+    <div class="players-side">
+        <div class="card-side">
+            <div class="player-card-container">
+                <div class="turn-chip-container">
+                    <img *ngIf="yourTurnFirst==true" class="turn-chip" src="assets/Chips/TurnChip.svg" style="left: -4em;">
+                </div>
+                <app-card-list [cards]=cards [position]=0></app-card-list>
+            </div>
+            <div class="player-input-container">
+                <div class="uniform-input-container">
+                    <button [disabled]="deal==false" class="deal-button" mat-raised-button color="primary" (click)="deal_button()">Deal</button>
+                </div>
+                <div class="uniform-input-container">
+                    <button [disabled]="fold==false" class="fold-button" mat-raised-button color="primary" (click)="fold_button()">Fold</button>
+                </div>
+                <div class="uniform-input-container">
+                    <button [disabled]="call==false" class="call-button" mat-raised-button color="primary" (click)="call_button()">Call</button>
+                </div>
+            </div>
+        </div>
+        <div class="card-side">
+            <div class="money-display">
+                <div class="money-to-the-right">
+                    <app-pile [dollars]=dollars></app-pile>
+                </div>
+            </div>
+            <div class="bet-border">
+                <div class="bet-container">
+                    <mat-form-field class="bet-amount-input-container">
+                        <mat-label>-$:</mat-label>
+                        <input [disabled]="bet==false" matInput maxlength="3" placeholder="Ex. 15"(keyup)="bet_keyup($event)">
+                    </mat-form-field>
+                    <div *ngIf="betAmount<dollars">
+                        <button [disabled]="bet==false" class="bet-button" mat-raised-button color="primary" (click)="bet_button()">Bet</button>
+                    </div>
+                    <div *ngIf="betAmount>=dollars">
+                        <button [disabled]="bet==false" class="bet-button" mat-raised-button color="primary" (click)="bet_button()">All-in</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

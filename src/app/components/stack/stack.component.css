@@ -1,0 +1,18 @@
+.chip{
+    position: relative;
+    /* left: 2.85em; */
+    width: 5em;
+    height: 5em;
+    margin-left: -0.75em;
+}
+.stack{
+    width: 1.2em;
+    height: 0.15em;
+}
+.stack-container{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column-reverse;
+    height: 0em;
+    background-color: greenyellow;
+}
