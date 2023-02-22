@@ -25,7 +25,6 @@ export class StackComponent implements OnInit{
       case 1: result = "red" ;break;
       case 2: result = "blue" ;break;
     }
-    console.log(this.IMAGEASSETBASEPATH + result + ".svg");
     return this.IMAGEASSETBASEPATH + result + ".svg"
   }
 

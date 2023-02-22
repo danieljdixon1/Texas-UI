@@ -38,6 +38,7 @@ export class TableComponent implements OnInit {
   }
 
   updateState(response: ResGameState){
+    console.log(response);
     this.yourTurnFirst = response.yourTurnFirst;
     this.dollars = response.dollars;
     this.oppoent_dollars = response.oppoent_dollars;

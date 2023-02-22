@@ -44,10 +44,6 @@ export class CardComponent implements OnInit {
       case CardSuit.Heart: suitResult = "H" ;break;
       case CardSuit.Spade: suitResult = "S" ;break;
     }
-    console.log(this.baseCardArtPath)
-    console.log(numberResult)
-    console.log(suitResult)
-    console.log(this.baseCardArtPath + numberResult + suitResult + ".svg")
 
     return this.baseCardArtPath + numberResult + suitResult + ".svg";
   }

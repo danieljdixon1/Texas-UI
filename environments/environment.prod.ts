@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    apiUrl: 'http://texas-service:3000/',
+    apiUrl: 'http://20.65.27.65:3000',
 };
