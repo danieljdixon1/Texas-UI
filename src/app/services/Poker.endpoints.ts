@@ -5,4 +5,5 @@ export class PokerEndpoints{
     static FOLD: string = "/fold";
     static CALL: string = "/call";
     static BET: string = "/bet";
+    static RESET: string = "/restart";
 }

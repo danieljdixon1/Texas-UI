@@ -131,6 +131,11 @@
     margin: 1em;
 }
 
+.reset-button {
+    width: 16em;
+    margin: 1em;
+}
+
 .bet-amount-input-container {
     margin-top: 1em;
     width: 5em;

@@ -23,36 +23,36 @@ export class PokerService {
   }
   
   public getState(): Observable<ResGameState>{
-    // return this.http.get<ResGameState>(environment.apiUrl + PokerEndpoints.STATE, {headers: this.getHeaders()});
-    return of<ResGameState>({
-      yourTurnFirst: false,
+    return this.http.get<ResGameState>(environment.apiUrl + PokerEndpoints.STATE, {headers: this.getHeaders()});
+  //   return of<ResGameState>({
+  //     yourTurnFirst: false,
 
-      dollars: 500,
-      oppoent_dollars: 500,
-      pot_dollars: 499,
+  //     dollars: 500,
+  //     oppoent_dollars: 500,
+  //     pot_dollars: 499,
       
-      cards: [
-        {faceUp: true, number: CardNumber.Eight, suit: CardSuit.Spade},
-        {faceUp: true, number: CardNumber.Four, suit: CardSuit.Heart},
-      ] as Card[],
-      oppoent_cards: [
-        {faceUp: false, number: CardNumber.Eight, suit: CardSuit.Spade},
-        {faceUp: false, number: CardNumber.Four, suit: CardSuit.Heart},
-      ] as Card[],
-      table_cards: [
-        {faceUp: false},
-        {faceUp: true, number: CardNumber.Two, suit: CardSuit.Diamond},
-        {faceUp: true, number: CardNumber.Eight, suit: CardSuit.Spade},
-        {faceUp: true, number: CardNumber.Ten, suit: CardSuit.Spade},
-      ] as Card[],
+  //     cards: [
+  //       {faceUp: true, number: CardNumber.Eight, suit: CardSuit.Spade},
+  //       {faceUp: true, number: CardNumber.Four, suit: CardSuit.Heart},
+  //     ] as Card[],
+  //     oppoent_cards: [
+  //       {faceUp: false, number: CardNumber.Eight, suit: CardSuit.Spade},
+  //       {faceUp: false, number: CardNumber.Four, suit: CardSuit.Heart},
+  //     ] as Card[],
+  //     table_cards: [
+  //       {faceUp: false},
+  //       {faceUp: true, number: CardNumber.Two, suit: CardSuit.Diamond},
+  //       {faceUp: true, number: CardNumber.Eight, suit: CardSuit.Spade},
+  //       {faceUp: true, number: CardNumber.Ten, suit: CardSuit.Spade},
+  //     ] as Card[],
   
-      opponentsAction: "called your 40$ bet",
+  //     opponentsAction: "called your 40$ bet",
   
-      deal: true,
-      fold: true,
-      call: true,
-      bet: true
-    } as ResGameState);
+  //     deal: true,
+  //     fold: true,
+  //     call: true,
+  //     bet: true
+  //   } as ResGameState);
   }
   public deal(): Observable<any>{
     return this.http.post<ResGameState>(environment.apiUrl + PokerEndpoints.DEAL, {}, {headers: this.getHeaders()});
@@ -68,5 +68,8 @@ export class PokerService {
   }
   public allin(): Observable<any>{
     return this.http.post<ResGameState>(environment.apiUrl + PokerEndpoints.BET, {headers: this.getHeaders()});
+  }
+  public reset(): Observable<any>{
+    return this.http.post<ResGameState>(environment.apiUrl + PokerEndpoints.RESET, {}, {headers: this.getHeaders()});
   }
 }

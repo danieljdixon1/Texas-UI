@@ -38,11 +38,10 @@ export class TableComponent implements OnInit {
   }
 
   updateState(response: ResGameState){
-    console.log(response);
     this.yourTurnFirst = response.yourTurnFirst;
     this.dollars = response.dollars;
     this.oppoent_dollars = response.oppoent_dollars;
-    this.pot_dollars = response.pot_dollars;
+    this.pot_dollars = response.pot_player + response.pot_opponent;
     this.cards = response.cards;
     this.oppoent_cards = response.oppoent_cards
     this.table_cards = response.table_cards
@@ -76,8 +75,15 @@ export class TableComponent implements OnInit {
       this.updateState(response);
     });
   }
+  reset_button(){
+    this.pokerService.reset().subscribe((response: ResGameState) => {
+      this.updateState(response);
+    });
+  }
+  
   bet_keyup(event: any){
       this.betAmount = event.target.value;
   }
+
 
 }
